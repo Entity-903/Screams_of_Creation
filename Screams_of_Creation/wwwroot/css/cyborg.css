@@ -12197,3 +12197,9 @@ legend {
 .popover-title {
   border-bottom: none;
 }
+
+.ball {
+    font-family: "Times New Roman";
+    font-size: 30px;
+    color: saddlebrown;
+}

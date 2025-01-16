@@ -1,0 +1,15 @@
+﻿@page
+@using SimpleSite.Data.Models
+@using SimpleSite.Pages
+@model MoviesModel
+@{
+	ViewData["Title"] = "Movies";
+}
+
+<h1>Movies</h1>
+@{
+	foreach(Movie movie in Model.Movies)
+	{
+		<partial name="_MoviePartial" model="movie" />
+	}
+}
