@@ -7,9 +7,35 @@
 }
 
 <h1>Movies</h1>
-@{
-	foreach(Movie movie in Model.Movies)
-	{
-		<partial name="_MoviePartial" model="movie" />
+
+<h3>Add a New Movie!</h3>
+<form method="post">
+	<div>
+		<label asp-for="@Model.NewMovie.Title"></label>
+		<input asp-for="@Model.NewMovie.Title" />
+	</div>
+	<div>
+		<label asp-for="@Model.NewMovie.Year"></label>
+		<input asp-for="@Model.NewMovie.Year" />
+	</div>
+	<div>
+		<label asp-for="@Model.NewMovie.Score"></label>
+		<input asp-for="@Model.NewMovie.Score" />
+	</div>
+	<div>
+		<input type="submit" value="Add Movie" />
+	</div>
+</form>
+
+<div>
+	@{
+		foreach(Movie movie in MoviesModel.Movies)
+		{
+			<partial name="_MoviePartial" model="movie" />
+		}
 	}
+</div>
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial" />
 }

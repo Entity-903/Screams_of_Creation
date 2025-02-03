@@ -1,0 +1,35 @@
+﻿@using VideoGameLibrary.Data.Models
+@model Game
+
+@*Format presentation of game information here*@
+
+<div class="col-4">
+	<div class="row">
+		<div>
+			<h2>Title: @Model.Title</h2>
+			<h4>Platform: @Model.Platform</h4>
+			<h4>Genre: @Model.Genre</h4>
+			<h4>ESRB Rating: @Model.ESRB_Rating</h4>
+			<h4>Year: @Model.Year</h4>
+			<img src="@Model.Image" width="250" />
+			<h4>LoanedTo: @Model.LoanedTo</h4>
+			<h4>LoanDate: @Model.LoanDate</h4>
+		</div>
+	</div>
+</div>
+
+
+
+@*Make image work*@
+@*
+<div>
+	<h2>Title: @Model.Title</h2>
+	<h2>Platform: @Model.Platform</h2>
+	<p>Genre: @Model.Genre</p>
+	<h2>ESRB Rating: @Model.ESRB_Rating</h2>
+	<h2>Year: @Model.Year</h2>
+	<img src="@Model.Image" width="250"/>
+	<h2>LoanedTo: @Model.LoanedTo</h2>
+	<h2>LoanDate: @Model.LoanDate</h2>
+</div>
+*@

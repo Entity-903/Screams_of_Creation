@@ -1,0 +1,18 @@
+﻿@page
+@using VideoGameLibrary.Data.Models
+@using VideoGameLibrary.Pages
+@model GamesModel
+@{
+	ViewData["Title"] = "Movies";
+}
+
+<h1>Games</h1>
+	<div class="row">
+	@foreach (Game game in Model.Games)
+	{
+		<div class="col-4">
+			<partial name="_GamePartial" model="@game" />
+		</div>
+	}
+
+	</div>
