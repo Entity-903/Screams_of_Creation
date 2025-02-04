@@ -6,7 +6,7 @@ namespace VideoGameLibrary.Pages
 {
 	public class GamesModel : PageModel
 	{
-		public List<Game> Games { get; set; } = new List<Game>
+		public static List<Game> Games { get; set; } = new List<Game>
 		{
 			new Game() { Title = "Deep Rock Galactic",            Platform = "PC", Genre = "FPS",          ESRB_Rating = "T",         Year = 2020, Image = "/images/DRG.jpg"            },
 			new Game() { Title = "Team Fortress 2",               Platform = "PC", Genre = "FPS",          ESRB_Rating = "M",         Year = 2007, Image = "/images/TF2.jpg"            },
@@ -18,14 +18,15 @@ namespace VideoGameLibrary.Pages
 		{
 		}
 
-		
+		// endebted is the person we are loaning the game out to
 		public IActionResult OnPost(string? endebted, int id)
 		{
-			Game game = Games.FirstOrDefault(g => id == g.Id);
+			Game? game = Games.FirstOrDefault(g => id == g.Id);
 			if (game != null)
 			{
 				if (endebted == null)
 				{
+					game.LoanedTo = null;
 					game.LoanDate = null;
 				}
 				else
@@ -35,8 +36,6 @@ namespace VideoGameLibrary.Pages
 				}
 			}
 
-
-			// Why does this error? does View really not exist?
 			return RedirectToAction("Get");
 		}
 	}

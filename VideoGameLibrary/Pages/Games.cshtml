@@ -8,9 +8,9 @@
 
 <h1>Games</h1>
 	<div class="row">
-	@foreach (Game game in Model.Games)
+	@foreach (Game game in GamesModel.Games)
 	{
-		<div class="col-4">
+		<div class="col-4 border">
 			<partial name="_GamePartial" model="@game" />
 		</div>
 	}

@@ -1,35 +1,34 @@
 ﻿@using VideoGameLibrary.Data.Models
 @model Game
 
-@*Format presentation of game information here*@
-
-<div class="col-4">
-	<div class="row">
-		<div>
-			<h2>Title: @Model.Title</h2>
-			<h4>Platform: @Model.Platform</h4>
-			<h4>Genre: @Model.Genre</h4>
-			<h4>ESRB Rating: @Model.ESRB_Rating</h4>
-			<h4>Year: @Model.Year</h4>
-			<img src="@Model.Image" width="250" />
-			<h4>LoanedTo: @Model.LoanedTo</h4>
-			<h4>LoanDate: @Model.LoanDate</h4>
-		</div>
-	</div>
-</div>
-
-
-
-@*Make image work*@
-@*
 <div>
 	<h2>Title: @Model.Title</h2>
-	<h2>Platform: @Model.Platform</h2>
-	<p>Genre: @Model.Genre</p>
-	<h2>ESRB Rating: @Model.ESRB_Rating</h2>
-	<h2>Year: @Model.Year</h2>
+	<h4>Platform: @Model.Platform</h4>
+	<h4>Genre: @Model.Genre</h4>
+	<h4>ESRB Rating: @Model.ESRB_Rating</h4>
+	<h4>Year: @Model.Year</h4>
 	<img src="@Model.Image" width="250"/>
-	<h2>LoanedTo: @Model.LoanedTo</h2>
-	<h2>LoanDate: @Model.LoanDate</h2>
+	@* Do not show loan info if null*@
+	@if (Model.LoanedTo != null)
+	{
+		// Apply a button that returns the game (set LoanedTo to null)
+		// Existing logic will set the date to null if LoanedTo is null
+		<h3>Game was loaned to <b class="text-danger">@Model.LoanedTo</b> on <b class="text-danger">@Model.LoanDate.Value.ToShortDateString()</b></h3>
+		// Button to return loaned game
+		<form method="post">
+			<input hidden name="id" value="@Model.Id" />
+			<button type="submit" class="btn btn-secondary">Return Game</button>
+		</form>
+	}
+	else
+	{
+		// Apply a button that allows the user to loan the game if the textbox is not an empty string
+		// Set LoanedTo to be the submitted string
+		// LoanDate = DateTime.Now will be handled in games.cshtml.cs
+		<form method="post">
+			<input type="hidden" name="id" value="@Model.Id" />
+			<input type="text" name="endebted" placeholder="The Endebted" class="form-control" />
+			<button type="submit" class="btn btn-secondary">Loan</button>
+		</form>
+	}
 </div>
-*@
