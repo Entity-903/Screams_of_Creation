@@ -7,30 +7,32 @@
 <div class="text-center">
     <h1 class="display-4">Mad Inputs</h1>
     <div class="col-12">
-		<form method="post">
+		@*Should we replace "Input1" with "First", "Input2" with "Second", etc?*@
+		@* Is method="post" action="/Story" looking for a post method in Story?*@
+		<form method="post" asp-page="Story">
 			<div class="row">
 				<div class="col-12">
-					<input id="Input1" type="text" name="Input1" placeholder="Noun" />
+					<input id="First" type="text" name="First" placeholder="Noun" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<input id="Input2" type="text" name="Input2" placeholder="Noun (Plural)" />
+					<input id="Second" type="text" name="Second" placeholder="Noun (Plural)" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<input id="Input3" type="text" name="Input3" placeholder="Verb (Present Tense)" />
+					<input id="Third" type="text" name="Third" placeholder="Verb (Present Tense)" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<input id="Input4" type="text" name="Input4" placeholder="Noun" />
+					<input id="Fourth" type="text" name="Fourth" placeholder="Noun" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<input id="Input5" type="text" name="Input5" placeholder="Adjective" />
+					<input id="Fifth" type="text" name="Fifth" placeholder="Adjective" />
 				</div>
 			</div>
 			<div class="row">
@@ -43,4 +45,4 @@
 </div>
 
 
-@*<a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>*@
+@*<a class="nav-link text-dark" asp-area="" asp-page="/Story">Story</a>*@
