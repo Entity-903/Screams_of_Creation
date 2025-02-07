@@ -1,0 +1,13 @@
+﻿@page "AllCows/Gallery/{id1}/{id2}"
+@model Routing.Pages.AllCowsModel
+@{
+}
+
+@if (Model.Id2 == null)
+{
+	<p>There are @Model.Id1 cows per page</p>
+}
+else
+{
+	<p>There are @Model.Id1 cows per page, on page @Model.Id2 .</p>
+}
