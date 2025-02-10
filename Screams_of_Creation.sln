@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mad Inputs", "Mad Inputs\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{B20B14EA-8434-4523-8460-5D89BFE8AC9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{1070FB2B-49BE-4FE6-8387-632A091CD237}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B20B14EA-8434-4523-8460-5D89BFE8AC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B20B14EA-8434-4523-8460-5D89BFE8AC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B20B14EA-8434-4523-8460-5D89BFE8AC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1070FB2B-49BE-4FE6-8387-632A091CD237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1070FB2B-49BE-4FE6-8387-632A091CD237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1070FB2B-49BE-4FE6-8387-632A091CD237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1070FB2B-49BE-4FE6-8387-632A091CD237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

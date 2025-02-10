@@ -29,7 +29,7 @@
 
 <div>
 	@{
-		foreach(Movie movie in MoviesModel.Movies)
+		foreach(Movie movie in Model.Provider.Movies)
 		{
 			<partial name="_MoviePartial" model="movie" />
 		}
