@@ -55,7 +55,7 @@ namespace LINQRefresher_v3.ExtensionMethods
         /// <returns>The collection of students not currently passing</returns>
         public static IEnumerable<Student> GetTheFailingStudents(this IEnumerable<Student> students)
         {
-            return (students.Where(x => x.GPA <= 2.0));
+            return (students.Where(x => x.GPA < 2.0));
         }
 
         //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
